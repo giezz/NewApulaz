@@ -49,6 +49,21 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtEmailFilter = new System.Windows.Forms.TextBox();
+            this.txtPhoneFilter = new System.Windows.Forms.TextBox();
+            this.txtMiddleNameFilter = new System.Windows.Forms.TextBox();
+            this.txtLastNameFilter = new System.Windows.Forms.TextBox();
+            this.txtNameFilter = new System.Windows.Forms.TextBox();
+            this.txtInnFilter = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,9 +80,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(513, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(513, 737);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // label1
             // 
@@ -221,11 +237,143 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(9, 480);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 18);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(13, 454);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 18);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "label10";
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(13, 428);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 18);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(13, 402);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 18);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "label12";
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(13, 376);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 18);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Фамилия";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(13, 350);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 18);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Имя";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {"A", "B", "C", "A1", "B1"});
+            this.comboBox1.Location = new System.Drawing.Point(113, 477);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(133, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // txtEmailFilter
+            // 
+            this.txtEmailFilter.Location = new System.Drawing.Point(113, 451);
+            this.txtEmailFilter.Name = "txtEmailFilter";
+            this.txtEmailFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtEmailFilter.TabIndex = 28;
+            // 
+            // txtPhoneFilter
+            // 
+            this.txtPhoneFilter.Location = new System.Drawing.Point(113, 425);
+            this.txtPhoneFilter.Name = "txtPhoneFilter";
+            this.txtPhoneFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtPhoneFilter.TabIndex = 27;
+            // 
+            // txtMiddleNameFilter
+            // 
+            this.txtMiddleNameFilter.Location = new System.Drawing.Point(113, 399);
+            this.txtMiddleNameFilter.Name = "txtMiddleNameFilter";
+            this.txtMiddleNameFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtMiddleNameFilter.TabIndex = 26;
+            // 
+            // txtLastNameFilter
+            // 
+            this.txtLastNameFilter.Location = new System.Drawing.Point(113, 373);
+            this.txtLastNameFilter.Name = "txtLastNameFilter";
+            this.txtLastNameFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtLastNameFilter.TabIndex = 25;
+            // 
+            // txtNameFilter
+            // 
+            this.txtNameFilter.Location = new System.Drawing.Point(113, 347);
+            this.txtNameFilter.Name = "txtNameFilter";
+            this.txtNameFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtNameFilter.TabIndex = 24;
+            // 
+            // txtInnFilter
+            // 
+            this.txtInnFilter.Location = new System.Drawing.Point(113, 321);
+            this.txtInnFilter.Name = "txtInnFilter";
+            this.txtInnFilter.Size = new System.Drawing.Size(133, 20);
+            this.txtInnFilter.TabIndex = 23;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(13, 324);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 18);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "ИНН";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(92, 527);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(74, 28);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.Text = "Найти";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 761);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtEmailFilter);
+            this.Controls.Add(this.txtPhoneFilter);
+            this.Controls.Add(this.txtMiddleNameFilter);
+            this.Controls.Add(this.txtLastNameFilter);
+            this.Controls.Add(this.txtNameFilter);
+            this.Controls.Add(this.txtInnFilter);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
@@ -253,6 +401,22 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtEmailFilter;
+        private System.Windows.Forms.TextBox txtPhoneFilter;
+        private System.Windows.Forms.TextBox txtMiddleNameFilter;
+        private System.Windows.Forms.TextBox txtLastNameFilter;
+        private System.Windows.Forms.TextBox txtNameFilter;
+        private System.Windows.Forms.TextBox txtInnFilter;
+        private System.Windows.Forms.Button btnSearch;
 
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;

@@ -35,5 +35,7 @@ namespace WinFormsEntityFrameWork.models
         
         [Column("driver_license_category")]
         public string DriverLicenceCategory { get; set; }
+        
+        
     }
 }

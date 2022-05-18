@@ -29,7 +29,7 @@ namespace WinFormsEntityFrameWork
         {
             using (EmployeeContext employeeContext = new EmployeeContext())
             {
-                var employees = employeeContext.Employees;
+                var employees = employeeContext.Employees.OrderBy(p => p.IdEmployee);
                 var empList = employees.ToList();
                 empList.Reverse();
                 dataGridView1.DataSource = null;
@@ -121,6 +121,45 @@ namespace WinFormsEntityFrameWork
                 employeeContext.SaveChanges();
             }
 
+            Select();
+        }
+
+        private void test(int a = 0)
+        {
+            
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            test();
+            // Employees model = new Employees();
+            using EmployeeContext employeeContext = new EmployeeContext();
+            var employees = employeeContext.Employees
+                // .Where(_ => true);
+                .Where(p => p.Inn == txtInnFilter.Text, !string.IsNullOrEmpty(txtInnFilter.Text))
+                .Where(p => p.FirstName == txtNameFilter.Text, !string.IsNullOrEmpty(txtNameFilter.Text))
+                .Where(p => p.LastName == txtLastNameFilter.Text, !string.IsNullOrEmpty(txtLastNameFilter.Text));
+            Console.WriteLine("test");
+            MessageBox.Show("123");
+            // .Where(p => p.Inn == txtInnFilter.Text);
+                // .Where(p => !string.IsNullOrEmpty(txtNameFilter.Text) && p.Inn == txtNameFilter.T
+                // ext)
+                // .Where(p => !string.IsNullOrEmpty(txtLastNameFilter.Text) && p.Inn == txtLastNameFilter.Text)
+                // .Where(p => !string.IsNullOrEmpty(txtMiddleNameFilter.Text) && p.Inn == txtMiddleNameFilter.Text);
+                // .OrderBy(p => p.IdEmployee)
+                // .ToList();
+
+            // employees.Reverse().ToList();
+            // var list = employees;
+            // list.Reverse();
+            // dataGridView1.DataSource = null;
+            dataGridView1.DataSource = employees.ToList();
+            // string sql = null;
+
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
             Select();
         }
     }
