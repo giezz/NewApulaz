@@ -7,8 +7,6 @@ namespace WinFormsEntityFrameWork.models
     [Table("employees")]
     public class Employees
     {
-
-        //TODO: 123
         [Key] 
         [Column("id_employee")]
         public int IdEmployee { get; set; }

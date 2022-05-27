@@ -3,6 +3,9 @@ using System.IO;
 
 namespace WinFormsEntityFrameWork
 {
+    /// <summary>
+    /// нахуй не нужный класс
+    /// </summary>
     public class Class
     {
         void test()

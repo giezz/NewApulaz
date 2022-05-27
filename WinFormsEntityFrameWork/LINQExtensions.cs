@@ -5,8 +5,12 @@ using System.Reflection;
 
 namespace WinFormsEntityFrameWork
 {
+    
     public static class LINQExtensions
     {
+        /// <summary>
+        /// Cлегка переделан метод Where под использование фильтров
+        /// </summary>
         public static IQueryable<TSource> Where<TSource>(this IQueryable<TSource> source,
             Expression<Func<TSource, bool>> predicate, bool isNeeded)
         {
